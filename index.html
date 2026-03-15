@@ -1,0 +1,115 @@
+<!DOCTYPE html>  <html lang="pt-br">  
+<head>  
+<meta charset="UTF-8">  
+<title>Valor da Conta Roblox</title>  <style>  
+body{  
+background:#0b0b0b;  
+color:white;  
+font-family:Arial;  
+text-align:center;  
+margin:0;  
+}  
+  
+header{  
+background:#111;  
+padding:20px;  
+font-size:28px;  
+font-weight:bold;  
+color:#ff2a2a;  
+}  
+  
+.container{  
+max-width:500px;  
+margin:auto;  
+padding:20px;  
+}  
+  
+.card{  
+background:#1a1a1a;  
+padding:20px;  
+border-radius:12px;  
+margin-top:20px;  
+}  
+  
+label{  
+display:block;  
+margin:10px;  
+font-size:16px;  
+}  
+  
+input[type="number"]{  
+padding:10px;  
+border-radius:8px;  
+border:none;  
+width:200px;  
+}  
+  
+button{  
+margin-top:20px;  
+padding:14px 30px;  
+border:none;  
+border-radius:10px;  
+background:#ff2a2a;  
+color:white;  
+font-size:18px;  
+font-weight:bold;  
+}  
+  
+#resultado{  
+margin-top:30px;  
+font-size:24px;  
+color:#00ff9d;  
+}  
+</style>  </head>  <body>  <header>  
+💰 Calculadora de Conta Roblox  
+</header>  <div class="container">  <div class="card">  
+<h3>Robux da conta</h3>  
+<input id="robux" type="number" placeholder="Ex: 5000">  
+</div>  <div class="card">  
+<h3>💎 Gamepasses Blox Fruits</h3>  <label><input type="checkbox" value="450"> 💰 2x Money</label>
+<label><input type="checkbox" value="450"> ⚔️ 2x Mastery</label>
+<label><input type="checkbox" value="350"> 🚤 Fast Boats</label>
+<label><input type="checkbox" value="2700"> 🗡 Dark Blade</label>
+<label><input type="checkbox" value="1200"> 🔔 Fruit Notifier</label>
+<label><input type="checkbox" value="450"> 👑 2x Boss Drops</label>
+
+</div>  <div class="card">  
+<h3>🍎 Frutas raras</h3>  <label><input type="checkbox" value="800"> 🐆 Leopard</label>
+<label><input type="checkbox" value="900"> 🐉 Dragon</label>
+<label><input type="checkbox" value="700"> 🍩 Dough</label>
+<label><input type="checkbox" value="1000"> 🦊 Kitsune</label>
+<label><input type="checkbox" value="600"> 👻 Spirit</label>
+<label><input type="checkbox" value="650"> ☠ Venom</label>
+
+</div>  <div class="card">  
+<h3>🧠 Roube o Brainrot</h3>  <label><input type="checkbox" value="200"> VIP</label>
+<label><input type="checkbox" value="250"> Flying Carpet</label>
+<label><input type="checkbox" value="500"> Admin Panel</label>
+<label><input type="checkbox" value="600"> Ban Hammer</label>
+<label><input type="checkbox" value="700"> Blackhole Slap</label>
+<label><input type="checkbox" value="800"> Laser Gun</label>
+
+</div>  <button onclick="calcular()">Calcular valor</button>
+
+<div id="resultado"></div>  </div>  <script>  
+  
+function calcular(){  
+  
+let robux = Number(document.getElementById("robux").value)  
+let total = robux  
+  
+let checks = document.querySelectorAll("input[type=checkbox]:checked")  
+  
+checks.forEach(c=>{  
+total += Number(c.value)  
+})  
+  
+let valor = total * 0.035  
+  
+document.getElementById("resultado").innerText =  
+"💰 Valor estimado da conta: R$ " + valor.toFixed(2)  
+  
+}  
+  
+</script>  </body>  
+</html>
